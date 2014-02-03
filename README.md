@@ -37,7 +37,7 @@ This plugin was developed in frustration at the (understandably) tiny limitation
 
 This can be done as follows:
 
-1. Sign up to a SMS provider and purchase some credits. I'm finding [TextMarketer](http://www.textmarketer.co.uk/)) is working well.
+1. Sign up to a SMS provider and purchase some credits. I'm finding [TextMarketer](http://www.textmarketer.co.uk/) is working well.
 2. Install a GenericWebService device as described above
 3. Set the `ServiceUrl` to `https://api.textmarketer.co.uk/services/rest/sms`
 4. Set the `Method` variable to `POST`
