@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<scpd xmlns="urn:schemas-upnp-org:service-1-0">
+    <specVersion>
+        <major>1</major>
+        <minor>0</minor>
+    </specVersion>
+    <serviceStateTable>
+        <stateVariable sendEvents="no">
+            <name>ServiceUrl</name>
+            <dataType>string</dataType>
+            <defaultValue>0</defaultValue>
+        </stateVariable>
+        <stateVariable sendEvents="no">
+            <name>Method</name>
+            <dataType>string</dataType>
+            <defaultValue>POST</defaultValue>
+        </stateVariable>
+        <stateVariable sendEvents="no">
+            <name>Payload</name>
+            <dataType>string</dataType>
+            <defaultValue></defaultValue>
+        </stateVariable>
+    </serviceStateTable>
+    <actionList>
+        <action>
+            <name>SendRequest</name>
+            <argumentList>
+                <argument>
+                    <name>Payload</name>
+                    <direction>in</direction>
+                    <relatedStateVariable>string</relatedStateVariable>
+                </argument>
+            </argumentList>
+        </action>
+    </actionList>
+</scpd>

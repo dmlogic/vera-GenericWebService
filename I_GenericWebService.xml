@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<implementation>
+    <files>L_GenericWebService.lua</files>
+    <startup>gwsStartup</startup>
+    <actionList>
+
+        <action>
+            <serviceId>urn:dmlogic-com:serviceId:GenericWebService1</serviceId>
+            <name>SendRequest</name>
+            <run>
+                SendRequest(lul_device, lul_settings)
+            </run>
+        </action>
+
+    </actionList>
+</implementation>

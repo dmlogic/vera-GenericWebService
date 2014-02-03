@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<root xmlns="urn:schemas-upnp-org:device-1-0">
+    <specVersion>
+        <major>1</major>
+        <minor>0</minor>
+    </specVersion>
+    <device>
+     <deviceType>urn:dmlogic-com:device:GenericWebService:1</deviceType>
+     <friendlyName>Generic Web Service</friendlyName>
+     <!--staticJson>D_GenericWebService.json</staticJson-->
+     <manufacturer>dmlogic.com</manufacturer>
+     <manufacturerURL>http://dmlogic.com</manufacturerURL>
+     <modelDescription>GenericWebService</modelDescription>
+     <modelName>GenericWebService</modelName>
+     <modelNumber>1.0</modelNumber>
+     <serviceList>
+        <service>
+            <serviceType>urn:dmlogic-com:service:GenericWebService:1</serviceType>
+            <serviceId>urn:dmlogic-com:serviceId:GenericWebService1</serviceId>
+            <SCPDURL>S_GenericWebService.xml</SCPDURL>
+        </service>
+    </serviceList>
+    <implementationList>
+        <implementationFile>I_GenericWebService.xml</implementationFile>
+    </implementationList>
+</device>
+</root>
