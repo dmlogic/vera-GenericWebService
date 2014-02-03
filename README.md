@@ -31,6 +31,15 @@ The device can then be called from via luup as follows:
 
 Where `YOUR_PAYLOAD` is anything in addition to the default payload for the device and `DEVICE_ID` is the unique ID for the device in question.
 
+## Limitations
+
+The plugin is pretty basic at the moment. Feel free to fork this repo and improve on any of the following:
+
+* Submit-only. No error checking or responses are available.
+* Single request only, so any authentication must be done directly via the Service URL or values in the payload
+* No custom headers.
+* Not much of a configuration interface. Could get very fiddly with large payloads
+
 ## Example - SMS notifications for door sensors
 
 This plugin was developed in frustration at the (understandably) tiny limitations on Vera SMS notifications for UK customers. I use it to send an SMS to my phone in the event a [door sensor](http://www.vesternet.com/z-wave-vision-door-window-sensor) is tripped when armed.
