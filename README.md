@@ -43,6 +43,6 @@ This can be done as follows:
 4. Set the `Method` variable to `POST`
 5. Set the `Payload` variable to the required information for TextMarketer, e.g. `username=XXX&password=YYY&mobile_number=441234567890&originator=YourHouse`
 6. Create two Scenes, one called "Arm doors" and one called "Disarm doors". Add your sensors to each Scene and set them Arm/Bypass as appropriate
-7. Add some LUUP to the "Arm doors" scene to monitor the `ArmedTripped` variable for each device. This code will need to be changed to suit your setup but mine looks like [this](scene.lua). The end goal is to add `message=something` to the payload
+7. Add some LUUP to the "Arm doors" scene to monitor the `ArmedTripped` variable for each device. This code will need to be changed to suit your setup but mine looks like [this](scene.lua). The end goal is to [add `message=something` to the payload](scene.lua#L32)
 8. Save your Lua, confirm changes and Save Vera. The scene will need restarting after each Vera reload.
 
