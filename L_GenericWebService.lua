@@ -2,11 +2,15 @@ local http = require 'socket.http'
 local deviceSettings = {}
 local deviceSID = 'urn:dmlogic-com:serviceId:GenericWebService1'
 
+-- http://192.168.1.104:3480/data_request?id=variableget&DeviceNum=13&Variable=Armed&serviceId=urn:micasaverde-com:serviceId:SecuritySensor1
+
 -- Builds the request and sends off to our service
 function SendRequest(lul_device, lul_settings)
 
     local response_body = { }
     local payload = deviceSettings.Payload .. "&"..lul_settings.Payload
+
+    -- luup.log("GenericWebService SendRequest payload "..payload,25)
 
     local res, code, response_headers = socket.http.request
     {
@@ -49,6 +53,8 @@ end
 function gwsStartup(lul_device)
 
     luup.task("Running Lua Startup", 1, "GenericWebService", -1)
+
+    -- luup.log("GenericWebService startup device "..lul_device,25)
 
     deviceSettings.ServiceUrl = gwsReadVariable(lul_device,deviceSID,"ServiceUrl","http://requestb.in/ppw34epp")
     deviceSettings.Method     = gwsReadVariable(lul_device,deviceSID,"Method","POST")
